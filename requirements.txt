@@ -1,0 +1,12 @@
+ragas==0.1.7
+datasets
+numpy
+pandas
+
+sentence-transformers
+faiss-cpu
+ollama
+
+langchain==0.1.16
+langchain-core==0.1.46
+pydantic<2

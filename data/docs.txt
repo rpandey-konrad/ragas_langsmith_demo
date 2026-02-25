@@ -1,0 +1,206 @@
+Business Requirement Document
+
+Project: ShopEZ – E-commerce Web Application
+
+1. Purpose
+
+The purpose of this document is to define the business and functional requirements for ShopEZ, an e-commerce web application that allows users to browse products, add items to a cart, place orders, and make payments securely.
+
+This document will serve as the primary reference for:
+
+Development
+
+Quality Assurance
+
+Test case creation
+
+Acceptance testing
+
+2. Scope
+In Scope
+
+User authentication
+
+Product browsing and search
+
+Shopping cart
+
+Checkout and payments
+
+Order management
+
+Out of Scope
+
+Mobile application
+
+Internationalization
+
+Third-party seller onboarding
+
+3. User Roles
+3.1 Guest User
+
+Can browse products
+
+Can search products
+
+Cannot place orders
+
+3.2 Registered User
+
+Can log in and log out
+
+Can add products to cart
+
+Can place orders
+
+Can view order history
+
+3.3 Admin User
+
+Can add, update, or remove products
+
+Can view all orders
+
+Can update order status
+
+4. Functional Requirements
+4.1 User Authentication
+
+REQ-AUTH-001
+The system shall allow users to register using email and password.
+
+REQ-AUTH-002
+The system shall validate email format during registration.
+
+REQ-AUTH-003
+The system shall allow registered users to log in using valid credentials.
+
+REQ-AUTH-004
+The system shall display an error message for invalid login attempts.
+
+REQ-AUTH-005
+The system shall lock the user account after 5 consecutive failed login attempts.
+
+REQ-AUTH-006
+The system shall allow users to reset their password via a registered email.
+
+4.2 Product Browsing and Search
+
+REQ-PROD-001
+The system shall display a list of available products on the home page.
+
+REQ-PROD-002
+Each product shall display name, price, thumbnail image, and availability status.
+
+REQ-PROD-003
+The system shall allow users to search products by name or category.
+
+REQ-PROD-004
+The system shall display a message when no products match the search criteria.
+
+4.3 Product Details Page
+
+REQ-PROD-005
+The system shall display detailed product information when a product is selected.
+
+REQ-PROD-006
+Product details shall include description, price, available quantity, and images.
+
+REQ-PROD-007
+The system shall disable the “Add to Cart” button when a product is out of stock.
+
+4.4 Shopping Cart
+
+REQ-CART-001
+The system shall allow users to add products to the shopping cart.
+
+REQ-CART-002
+The system shall allow users to update product quantity in the cart.
+
+REQ-CART-003
+The system shall remove a product from the cart when quantity is set to zero.
+
+REQ-CART-004
+The system shall display the total cart value including applicable taxes.
+
+REQ-CART-005
+The system shall persist cart items for logged-in users across sessions.
+
+4.5 Checkout Process
+
+REQ-CHK-001
+The system shall allow only logged-in users to proceed to checkout.
+
+REQ-CHK-002
+The system shall collect shipping address details during checkout.
+
+REQ-CHK-003
+The system shall validate mandatory shipping fields before proceeding.
+
+REQ-CHK-004
+The system shall display an order summary before payment confirmation.
+
+4.6 Payments
+
+REQ-PAY-001
+The system shall allow users to make payments using credit/debit cards.
+
+REQ-PAY-002
+The system shall allow users to select Cash on Delivery (COD).
+
+REQ-PAY-003
+The system shall display an error message for failed payment transactions.
+
+REQ-PAY-004
+The system shall generate an order ID upon successful payment.
+
+REQ-PAY-005
+The system shall prevent duplicate payments for the same order.
+
+4.7 Order Management
+
+REQ-ORD-001
+The system shall display order confirmation after successful checkout.
+
+REQ-ORD-002
+The system shall allow users to view their order history.
+
+REQ-ORD-003
+Each order shall display order ID, date, items, total amount, and status.
+
+REQ-ORD-004
+The system shall allow admin users to update order status.
+
+5. Non-Functional Requirements
+
+NFR-001
+The system shall respond to user actions within 3 seconds under normal load.
+
+NFR-002
+The system shall ensure secure handling of user credentials and payment data.
+
+NFR-003
+The system shall be compatible with modern browsers (Chrome, Safari, Firefox).
+
+6. Assumptions
+
+Users have stable internet connectivity
+
+Payment gateway availability is handled by a third party
+
+Email services are configured externally
+
+7. Constraints
+
+The system must comply with basic data protection standards
+
+The initial release supports only one currency
+
+8. Acceptance Criteria
+
+Users can successfully place an order end-to-end
+
+Invalid inputs are handled gracefully
+
+No critical functional defects remain open at release time
